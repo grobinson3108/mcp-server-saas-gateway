@@ -1,0 +1,49 @@
+{
+  "name": "mcp-server-saas-gateway",
+  "version": "0.1.0",
+  "description": "MCP server template that aggregates multiple REST APIs (your SaaS, third-party tools, internal APIs) under a single MCP gateway — config-driven, Bearer-auth, zero per-app boilerplate.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-saas-gateway": "dist/index.js"
+  },
+  "files": [
+    "dist/**/*",
+    "src/**/*",
+    "examples/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "claude-code",
+    "claude-desktop",
+    "gateway",
+    "saas",
+    "rest-api",
+    "typescript",
+    "ai-tools"
+  ],
+  "author": "Greg Robinson <greg@audelalia.fr> (https://audelalia.fr)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grobinson3108/mcp-server-saas-gateway.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
