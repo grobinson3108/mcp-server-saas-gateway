@@ -8,7 +8,7 @@ on:
 
 jobs:
   typescript:
-    name: TypeScript build . Node ${{ matrix.node }}
+    name: TypeScript build · Node ${{ matrix.node }}
     runs-on: ubuntu-latest
 
     strategy:
@@ -22,10 +22,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-          cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --no-audit --no-fund
 
       - name: TypeScript compilation check
         run: npx tsc --noEmit
